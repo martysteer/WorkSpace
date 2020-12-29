@@ -3,15 +3,596 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://example.com/warped/general-broadcast-backchannel.datestamp-12.47.12.12.47/</loc>
+    <lastmod>2047-12-12T12:47:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://example.com/categories/</loc>
+    <lastmod>2047-12-12T12:47:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://example.com/tags/closed-broadcast/</loc>
+    <lastmod>2047-12-12T12:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2047-12-12T12:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/warped/</loc>
+    <lastmod>2047-12-12T12:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/warped/</loc>
+    <lastmod>2047-12-12T12:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2047-12-12T12:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/warped/general-broadcast-backchannel.datestamp-12.13.12.12.47/</loc>
+    <lastmod>2047-12-12T12:13:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/warped/general-broadcast-backchannel.datestamp-23.04.11.12.47/</loc>
+    <lastmod>2047-12-12T12:13:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/general-broadcast/</loc>
+    <lastmod>2047-12-12T12:13:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/warped/general-broadcast-backchannel.datestamp-21.22.11.12.47/</loc>
+    <lastmod>2047-12-11T21:22:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/warped/general-broadcast-backchannel.datestamp-01.34.11.12.47/</loc>
+    <lastmod>2047-12-11T01:34:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/chapters/</loc>
+    <lastmod>2020-12-28T19:46:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/</loc>
+    <lastmod>2011-04-10T13:36:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/</loc>
+    <lastmod>2011-04-10T13:36:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/warped-comments/</loc>
+    <lastmod>2011-04-10T13:36:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2011/04/10/warped/</loc>
+    <lastmod>2011-04-10T13:36:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/workspace/</loc>
+    <lastmod>2011-04-10T13:36:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/workspace/</loc>
+    <lastmod>2011-04-10T13:36:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/janahara/</loc>
+    <lastmod>2010-07-02T11:39:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/janahara/</loc>
+    <lastmod>2010-07-02T11:39:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/the-deal-comments/</loc>
+    <lastmod>2010-07-02T11:39:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2010/07/02/the-deal/</loc>
+    <lastmod>2010-07-02T11:39:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/charlie-babbitt-comments/</loc>
+    <lastmod>2009-08-19T23:12:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/08/20/charlie-babbitt/</loc>
+    <lastmod>2009-08-19T23:12:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/infodump/</loc>
+    <lastmod>2009-08-19T23:12:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/infodump/</loc>
+    <lastmod>2009-08-19T23:12:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/mute-comments/</loc>
+    <lastmod>2009-08-09T11:46:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/08/09/mute/</loc>
+    <lastmod>2009-08-09T11:46:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/brant/</loc>
+    <lastmod>2009-08-02T15:58:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/brant/</loc>
+    <lastmod>2009-08-02T15:58:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/deafblind-date-comments/</loc>
+    <lastmod>2009-08-02T15:58:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/08/02/deafblind-date/</loc>
+    <lastmod>2009-08-02T15:58:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/life-after-workspace/</loc>
+    <lastmod>2009-08-02T15:58:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/life-after-workspace/</loc>
+    <lastmod>2009-08-02T15:58:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/gallery/</loc>
+    <lastmod>2009-07-18T15:21:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/workspace-all-chronologically/</loc>
+    <lastmod>2009-07-18T11:53:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/07/11/brighton-run/</loc>
+    <lastmod>2009-07-11T11:39:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/calvary-soldier-comments/</loc>
+    <lastmod>2009-07-02T20:57:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/07/02/calvary-soldier/</loc>
+    <lastmod>2009-07-02T20:57:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/nazca-tweets-comments/</loc>
+    <lastmod>2009-05-31T14:08:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/05/31/nazca-tweets/</loc>
+    <lastmod>2009-05-31T14:08:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/05/25/instruction-creep/</loc>
+    <lastmod>2009-05-25T17:37:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/05/19/drip-down/</loc>
+    <lastmod>2009-05-19T20:45:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/operator-1338/</loc>
+    <lastmod>2009-05-19T20:45:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/its-the-only-way-to-be-sure-comments/</loc>
+    <lastmod>2009-04-19T15:50:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/04/19/its-the-only-way-to-be-sure/</loc>
+    <lastmod>2009-04-19T15:50:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/pardis/</loc>
+    <lastmod>2009-04-19T15:50:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/pardis/</loc>
+    <lastmod>2009-04-19T15:50:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/notes-to-babs-4-comments/</loc>
+    <lastmod>2009-04-19T13:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/04/19/notes-to-babs-4/</loc>
+    <lastmod>2009-04-19T13:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/operator-1338/</loc>
+    <lastmod>2009-04-19T13:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/04/19/work-makes-you-free-2/</loc>
+    <lastmod>2009-04-19T12:49:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/visitors-guide/</loc>
+    <lastmod>2009-04-14T21:19:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/03/08/ratchet/</loc>
+    <lastmod>2009-03-08T13:20:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/the-deconstructed-man-comments/</loc>
+    <lastmod>2009-02-25T21:53:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/02/25/the-deconstructed-man/</loc>
+    <lastmod>2009-02-25T21:53:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/02/24/empennage/</loc>
+    <lastmod>2009-02-24T19:45:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2009/02/10/out-patient/</loc>
+    <lastmod>2009-02-10T22:59:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/what-its-like-not-to-believe-comments/</loc>
+    <lastmod>2008-10-21T21:16:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/10/21/what-its-like-not-to-believe/</loc>
+    <lastmod>2008-10-21T21:16:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/pathology-comments/</loc>
+    <lastmod>2008-08-31T14:51:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/08/31/pathology/</loc>
+    <lastmod>2008-08-31T14:51:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/07/31/bullpup/</loc>
+    <lastmod>2008-07-31T20:27:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/tad-revert/</loc>
+    <lastmod>2008-07-31T20:27:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/07/27/veni-vida-viva/</loc>
+    <lastmod>2008-07-27T14:15:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/07/10/it-rubs-the-lotion-on-its-skin/</loc>
+    <lastmod>2008-07-10T21:28:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/dead-peasants-society-comments/</loc>
+    <lastmod>2008-07-08T21:20:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/07/08/dead-peasants-society/</loc>
+    <lastmod>2008-07-08T21:20:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/tad-revert/</loc>
+    <lastmod>2008-07-08T21:20:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/06/17/bellend-x-1/</loc>
+    <lastmod>2008-06-17T13:04:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/06/15/hastati-la-vista/</loc>
+    <lastmod>2008-06-15T15:08:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/06/01/moral-hazard/</loc>
+    <lastmod>2008-06-01T15:11:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/piebald-piper-comments/</loc>
+    <lastmod>2008-05-26T14:22:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/05/26/piebald-piper/</loc>
+    <lastmod>2008-05-26T14:22:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/acclimation-comments/</loc>
+    <lastmod>2008-05-25T16:08:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/05/25/acclimation/</loc>
+    <lastmod>2008-05-25T16:08:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/posthuman-orphan-comments/</loc>
+    <lastmod>2008-05-18T12:28:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/05/18/posthuman-orphan/</loc>
+    <lastmod>2008-05-18T12:28:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/05/14/anti-ethics/</loc>
+    <lastmod>2008-05-14T21:47:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/this-way-to-the-egress-comments/</loc>
+    <lastmod>2008-05-11T16:25:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/05/11/this-way-to-the-egress/</loc>
+    <lastmod>2008-05-11T16:25:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/05/01/motherless-child/</loc>
+    <lastmod>2008-05-01T18:40:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/29/your-name%e2%80%99s-not-down/</loc>
+    <lastmod>2008-04-29T20:32:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/28/no-space-man/</loc>
+    <lastmod>2008-04-28T18:12:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog2mdconversion/noman-comments/</loc>
+    <lastmod>2008-04-27T14:56:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/27/noman/</loc>
+    <lastmod>2008-04-27T14:56:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/26/sisyphus-rising/</loc>
+    <lastmod>2008-04-26T17:43:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/23/going-forward/</loc>
+    <lastmod>2008-04-23T22:53:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/23/the-defiant-one/</loc>
+    <lastmod>2008-04-23T11:03:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/20/centralia/</loc>
+    <lastmod>2008-04-20T17:06:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/17/quizling/</loc>
+    <lastmod>2008-04-17T20:34:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/16/hyperunreal/</loc>
+    <lastmod>2008-04-16T21:46:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/15/orgone-grinder/</loc>
+    <lastmod>2008-04-15T19:27:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/09/bullet-point-time/</loc>
+    <lastmod>2008-04-09T18:15:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/grind/</loc>
+    <lastmod>2008-04-06T19:48:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/rl/</loc>
+    <lastmod>2008-04-06T19:48:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/06/weekend/</loc>
+    <lastmod>2008-04-06T19:48:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/contract/</loc>
+    <lastmod>2008-04-05T14:11:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/covenant/</loc>
+    <lastmod>2008-04-05T14:11:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/obligations/</loc>
+    <lastmod>2008-04-05T14:11:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/04/05/stick/</loc>
+    <lastmod>2008-04-05T14:11:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/03/19/gives-god-head/</loc>
+    <lastmod>2008-03-19T11:17:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/03/18/rez/</loc>
+    <lastmod>2008-03-18T18:22:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/03/16/null-cipher/</loc>
+    <lastmod>2008-03-16T14:00:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/03/11/morality-gap/</loc>
+    <lastmod>2008-03-11T12:05:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/03/09/job/</loc>
+    <lastmod>2008-03-09T12:46:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/03/08/non-binding-agreement/</loc>
+    <lastmod>2008-03-08T12:45:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/03/06/emotional-machine/</loc>
+    <lastmod>2008-03-06T17:04:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/irritated/</loc>
+    <lastmod>2008-03-03T20:04:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/03/03/multi-channel-infoexistence/</loc>
+    <lastmod>2008-03-03T20:04:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/02/15/an-embarrassing-death/</loc>
+    <lastmod>2008-02-15T23:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/02/15/warped/</loc>
+    <lastmod>2008-02-15T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/02/07/drone/</loc>
+    <lastmod>2008-02-07T21:20:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/02/05/work-makes-you-free/</loc>
+    <lastmod>2008-02-05T21:31:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2008/02/04/the-lucas-filter/</loc>
+    <lastmod>2008-02-04T22:08:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/warped/general-broadcast-backchannel.datestamp-no-datestamp/</loc>
+    <lastmod>1970-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/-0001/11/30/geobiog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://example.com/-0001/11/30/morpheus-wired/</loc>
   </url>
   
 </urlset>

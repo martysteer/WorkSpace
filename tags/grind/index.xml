@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>grind on Workspace</title>
+    <link>https://example.com/tags/grind/</link>
+    <description>Recent content in grind on Workspace</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Apr 2008 19:48:11 +0000</lastBuildDate><atom:link href="https://example.com/tags/grind/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week end</title>
+      <link>https://example.com/2008/04/06/weekend/</link>
+      <pubDate>Sun, 06 Apr 2008 19:48:11 +0000</pubDate>
+      
+      <guid>https://example.com/2008/04/06/weekend/</guid>
+      <description>Friday always hurts. Divestment is a bitch; Job does its best, a mild pre-exmmersion palliative analgesic plus some standard reality counselling hypnotics, but still, RL is always a grind at first. Gravity reasserts, data access is torturously slow, cooking – sheesh, and the sheer effort of having to interact on the poverty of the human-only level.
+Coarse lumpen humanity everywhere you look. Brains, mouths and tongues forming (so slowly), the info-poor commerce on the pitifully narrow organic bandwidth that is people.</description>
+    </item>
+    
+  </channel>
+</rss>

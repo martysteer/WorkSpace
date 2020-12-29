@@ -2,9 +2,154 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Workspace</title>
-    <link>/tags/</link>
+    <link>https://example.com/tags/</link>
     <description>Recent content in Tags on Workspace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Dec 2047 12:47:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>closed broadcast</title>
+      <link>https://example.com/tags/closed-broadcast/</link>
+      <pubDate>Thu, 12 Dec 2047 12:47:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/closed-broadcast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>general broadcast</title>
+      <link>https://example.com/tags/general-broadcast/</link>
+      <pubDate>Thu, 12 Dec 2047 12:13:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/general-broadcast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WorkSpace</title>
+      <link>https://example.com/tags/workspace/</link>
+      <pubDate>Sun, 10 Apr 2011 13:36:15 +0000</pubDate>
+      
+      <guid>https://example.com/tags/workspace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Janahara</title>
+      <link>https://example.com/tags/janahara/</link>
+      <pubDate>Fri, 02 Jul 2010 11:39:28 +0000</pubDate>
+      
+      <guid>https://example.com/tags/janahara/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Infodump</title>
+      <link>https://example.com/tags/infodump/</link>
+      <pubDate>Wed, 19 Aug 2009 23:12:47 +0000</pubDate>
+      
+      <guid>https://example.com/tags/infodump/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Brant</title>
+      <link>https://example.com/tags/brant/</link>
+      <pubDate>Sun, 02 Aug 2009 15:58:30 +0000</pubDate>
+      
+      <guid>https://example.com/tags/brant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life After WorkSpace</title>
+      <link>https://example.com/tags/life-after-workspace/</link>
+      <pubDate>Sun, 02 Aug 2009 15:58:30 +0000</pubDate>
+      
+      <guid>https://example.com/tags/life-after-workspace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pardis</title>
+      <link>https://example.com/tags/pardis/</link>
+      <pubDate>Sun, 19 Apr 2009 15:50:55 +0000</pubDate>
+      
+      <guid>https://example.com/tags/pardis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Operator 1338</title>
+      <link>https://example.com/tags/operator-1338/</link>
+      <pubDate>Sun, 19 Apr 2009 13:28:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/operator-1338/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tad Revert</title>
+      <link>https://example.com/tags/tad-revert/</link>
+      <pubDate>Tue, 08 Jul 2008 21:20:36 +0000</pubDate>
+      
+      <guid>https://example.com/tags/tad-revert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grind</title>
+      <link>https://example.com/tags/grind/</link>
+      <pubDate>Sun, 06 Apr 2008 19:48:11 +0000</pubDate>
+      
+      <guid>https://example.com/tags/grind/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RL</title>
+      <link>https://example.com/tags/rl/</link>
+      <pubDate>Sun, 06 Apr 2008 19:48:11 +0000</pubDate>
+      
+      <guid>https://example.com/tags/rl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>contract</title>
+      <link>https://example.com/tags/contract/</link>
+      <pubDate>Sat, 05 Apr 2008 14:11:21 +0000</pubDate>
+      
+      <guid>https://example.com/tags/contract/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>covenant</title>
+      <link>https://example.com/tags/covenant/</link>
+      <pubDate>Sat, 05 Apr 2008 14:11:21 +0000</pubDate>
+      
+      <guid>https://example.com/tags/covenant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>obligations</title>
+      <link>https://example.com/tags/obligations/</link>
+      <pubDate>Sat, 05 Apr 2008 14:11:21 +0000</pubDate>
+      
+      <guid>https://example.com/tags/obligations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Irritated</title>
+      <link>https://example.com/tags/irritated/</link>
+      <pubDate>Mon, 03 Mar 2008 20:04:31 +0000</pubDate>
+      
+      <guid>https://example.com/tags/irritated/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
