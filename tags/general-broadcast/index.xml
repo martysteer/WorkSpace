@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>general broadcast on Workspace</title>
+    <title>general broadcast on WorkSpace</title>
     <link>https://example.com/tags/general-broadcast/</link>
-    <description>Recent content in general broadcast on Workspace</description>
+    <description>Recent content in general broadcast on WorkSpace</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Dec 2047 12:13:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/general-broadcast/index.xml" rel="self" type="application/rss+xml" />
