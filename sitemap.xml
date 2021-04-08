@@ -38,6 +38,9 @@
     <loc>https://example.com/warped/2047-12-11-general-broadcast-backchannel.datestamp-01.34.11.12.47/</loc>
     <lastmod>2047-12-11T01:34:00+00:00</lastmod>
   </url><url>
+    <loc>https://example.com/chapters/</loc>
+    <lastmod>2020-12-28T19:46:50+00:00</lastmod>
+  </url><url>
     <loc>https://example.com/blog2mdconversion/</loc>
     <lastmod>2011-04-10T13:36:15+00:00</lastmod>
   </url><url>
@@ -323,7 +326,32 @@
     <loc>https://example.com/2008/03/06/emotional-machine/</loc>
     <lastmod>2008-03-06T17:04:32+00:00</lastmod>
   </url><url>
+    <loc>https://example.com/tags/irritated/</loc>
+    <lastmod>2008-03-03T20:04:31+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/2008/03/03/multi-channel-infoexistence/</loc>
+    <lastmod>2008-03-03T20:04:31+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/2008/02/15/an-embarrassing-death/</loc>
+    <lastmod>2008-02-15T23:26:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/2008/02/15/warped/</loc>
+    <lastmod>2008-02-15T23:09:07+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/2008/02/07/drone/</loc>
+    <lastmod>2008-02-07T21:20:19+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/2008/02/05/work-makes-you-free/</loc>
+    <lastmod>2008-02-05T21:31:17+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/2008/02/04/the-lucas-filter/</loc>
+    <lastmod>2008-02-04T22:08:14+00:00</lastmod>
+  </url><url>
     <loc>https://example.com/warped/1970-01-01-closed-broadcast-personal-fb-log.no-datestamp/</loc>
     <lastmod>1970-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/-0001/11/30/geobiog/</loc>
+  </url><url>
+    <loc>https://example.com/-0001/11/30/morpheus-wired/</loc>
   </url>
 </urlset>
