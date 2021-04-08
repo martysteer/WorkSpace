@@ -142,14 +142,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>Irritated</title>
-      <link>https://example.com/tags/irritated/</link>
-      <pubDate>Mon, 03 Mar 2008 20:04:31 +0000</pubDate>
-      
-      <guid>https://example.com/tags/irritated/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
