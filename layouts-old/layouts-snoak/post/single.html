@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+
+<body class="calligraphic">
+  {{ partial "font-changer.html" . }}
+  <main class="container">
+    {{ partial "header.html" . }}
+
+    <article>
+      {{ .Content }}
+    </article>
+
+    <nav class="content-nav">
+      <div class="go-center">
+        {{ with .NextInSection }}
+          &larr; <a class="next" href="{{ .RelPermalink }}">Prev chapter</a> •
+        {{ end }}
+        {{ with .PrevInSection }}
+          <a class="next" href="{{ .RelPermalink }}">Next chapter</a> &rarr;
+        {{ end }}
+      </div>
+    </nav>
+
+    {{ partial "nav.html" . }}
+    {{ partial "footer.html" . }}
+  </main>
+</body>
+
+</html>

@@ -1,10 +1,23 @@
-{{ define "section_content" }}
-<article role="article" class="flex-container">
-{{ .Content }}
-</article>
-<nav>
-	{{ with .NextInSection }}
-	<h3 class="go-center">&rarr; <a class="next" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h3>
-	{{ end }}
-</nav>
-{{ end }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+
+<body>
+  <main class="container">
+    <nav class="head-nav">
+      <a href="/"><span>WorkSpace</span></a> &larr;
+    </nav>
+  
+    <h1>{{ .Title | markdownify }}</h1>
+
+    <article>
+      {{ .Content }}
+    </article>
+
+    {{ partial "nav.html" . }}
+    {{ partial "footer.html" . }}
+  </main>
+</body>
+
+</html>

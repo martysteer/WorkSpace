@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+
+<body class="calligraphic">
+  {{ partial "font-changer.html" . }}
+  <div class="container">
+    <nav class="head-nav">
+      <a href="/"><span>Home</span></a> &larr;
+    </nav>
+  
+    <h1>{{ .Title | markdownify }}</h1>
+    
+    {{ .Content }}
+    
+    <article>
+      <section>
+        <ol>
+          {{ range sort (where site.RegularPages.ByWeight "Type" "in" "post") }}
+          <li>{{ .Render "list-item" }}</li>
+          {{ end }}
+        </ol>
+      </section>
+    </article>
+
+    {{ partial "nav.html" . }}
+    {{ partial "footer.html" . }}
+
+  </div>
+</body>
+</html>

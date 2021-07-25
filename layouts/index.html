@@ -1,41 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Site.LanguageCode }}">
 
-<head>
-    {{ partial "head.html" . }}
-    {{ partial "head/js.html" . }}
-    <title>{{ .Title | markdownify }}</title>
-</head>
+{{ partial "head.html" . }}
 
-<body>
-    <!-- particles.js container -->
-    <div id="particles-js"></div>
-
-    <nav role="navigation" class="flex-container">
-        <h1>{{ .Site.Title }}</h1>
-        
-        {{ if .Site.Params.mainMenu }}
-        {{ range .Site.Params.mainMenu }}
-            <a href="{{.link}}" class="big-link">
-                {{.text}}
-            </a>
-        {{ end }}
-
-        {{ else }}
-        {{ range .Site.Sections }}
-            <a href="{{.RelPermalink}}" class="big-link">
-                {{.Title | markdownify}}
-            </a>
-        {{ end }}
+<body class="front">
+  <div class="container">
+    <h1>{{ .Title | markdownify }}</h1>
+    
+    <nav role="navigation" class="flex-container big-link">
+        {{ if .Site.Menus.main }}
+          {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}">{{.Name}}</a>
+          {{ end }}
         {{ end }}
     </nav>
 
+    {{ .Content }}
 
-    <!-- particles.js container -->
-    <div id="particles-js"></div>
-    {{ $main := resources.Get "js/index.js" }}
-    <script src='{{ $main.RelPermalink }}'></script>
+    {{ partial "nav.html" . }}
+    {{ partial "footer.html" . }}
 
+  </main>
 </body>
 
 </html>
