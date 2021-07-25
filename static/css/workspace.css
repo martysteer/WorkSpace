@@ -1,0 +1,115 @@
+/* Fonts from, Velvetyne foundry */
+/* Karrik */
+/* http://velvetyne.fr/fonts/karrik */
+/* (Please play this game: http://karrik-game.velvetyne.fr) */
+@font-face {
+  font-family: 'Karrik';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Karrik-Regular.woff");
+  src: url('../fonts/Karrik-Regular.woff') format('woff'), url('../fonts/Karrik-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Karrik';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Karrik-Italic.woff");
+  src: url('../fonts/Karrik-Italic.woff') format('woff'), url('fonts/Karrik-Italic.woff2') format('woff2');
+}
+
+/* Fonts from, Velvetyne foundry */
+/* Minipax */
+/* http://velvetyne.fr/fonts/minipax/ */
+@font-face {
+  font-family: 'Minipax';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Minipax/Minipax-Regular.eot');
+  src: url('../fonts/Minipax-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Minipax-Regular.woff') format('woff'), url('../fonts/Minipax-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Minipax';
+  font-style: bold;
+  font-weight: 900;
+  src: url("../fonts/Minipax-Bold.eot");
+  src: url('../fonts/Minipax-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Minipax-Bold.woff') format('woff'), url('../fonts/Minipax-Bold.woff2') format('woff2');
+}
+
+
+
+
+html {
+    background-color: #333000;
+    color: #FFF;
+}
+body {
+    margin-bottom: 5rem;
+    max-width: 1684px;
+    font-family: 'Courier', serif;
+    font-size: 1em
+
+}
+
+
+.container {
+    padding: 2em;
+}
+
+
+/* Site nav */
+nav.front-nav,
+nav.site-nav,
+footer.site-footer,
+nav.content-nav {
+    text-align: center;
+}
+
+nav.content-nav {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+nav.site-nav {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+}
+
+.front nav.front-nav,
+.front nav.site-nav,
+.front footer.site-footer {
+    color: #CCC;
+}
+
+.front p a {
+    border-bottom: 0;
+}
+
+footer, .site-nav {
+    color: #CCC;
+}
+
+article a.readmore,
+p a {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    border-bottom: 0;
+}
+article a.readmore {
+    float: right;
+}
+blockquote {
+    margin: 0 0 2rem;
+    color: #6f4107;
+}
+figure,
+figure img,
+figure figcaption {
+    display: flex;
+    justify-content: center;
+     margin-top: auto;
+}
+
+
+/*bold link colour #d0cda9 */

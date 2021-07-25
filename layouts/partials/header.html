@@ -1,0 +1,9 @@
+<header>
+  <nav class="head-nav">
+  {{ range .Site.Menus.head }}
+  <a href="{{ .URL }}"><span>{{ .Name }}</span></a> &larr;
+  {{ end }}
+  </nav>
+  
+  <h1>{{ .Title | markdownify }}</h1>
+</header>

@@ -14,7 +14,7 @@ staticDir:
 
 params:
   keywords: Mythaxis Magazine Science Fiction and Fantasy Modern Fiction
-  authorname: Les Sklaroff
+  authorname: Killbot
   description: WorkSpace &larr; A Story of Work
   githubusername: mythaxis/WorkSpace
   dateform: "15:04.02.01.06"
@@ -41,3 +41,8 @@ menu:
     - name: Gallery
       url: /gallery.html
       weight: -6
+  # Sources menu
+  sources:
+    - name: Mythaxis magazine
+      url: https://mythaxis.co.uk
+      weight: -9
