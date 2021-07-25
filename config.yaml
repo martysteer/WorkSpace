@@ -1,0 +1,43 @@
+baseURL: ""
+languageCode: "en-gb"
+title: "WorkSpace"
+theme: "paperback"
+# googleAnalytics: "UA-146012578-1"
+uglyurls: true
+relativeurls: true
+canonifyURLs: true
+disableHugoGeneratorInject: true
+languageCode: en-uk
+publishDir: "docs" # for github pages
+staticDir:
+- static
+
+params:
+  keywords: Mythaxis Magazine Science Fiction and Fantasy Modern Fiction
+  authorname: Les Sklaroff
+  description: WorkSpace &larr; A Story of Work
+  githubusername: mythaxis/WorkSpace
+  dateform: "15:04.02.01.06"
+  showDate: true
+  # Metadata for Open Graph and Twitter
+  description: "WorkSpace &larr; A Story of Work"
+  title: "WorkSpace &larr; A Story of Work"
+  # rss: ""
+
+permalinks:
+  post: :filename
+
+menu:
+  main:
+    - name: A Visitors Guide
+      url: visitors-guide
+      weight: -10
+    - name: Chapters
+      url: /chapters.html
+      weight: -9
+    - name: Categories
+      url: /categories.html
+      weight: -7
+    - name: Gallery
+      url: /gallery.html
+      weight: -6
