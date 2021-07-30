@@ -2,89 +2,89 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on WorkSpace</title>
-    <link>https://example.com/categories/</link>
+    <link>/categories.html</link>
     <description>Recent content in Categories on WorkSpace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 12 Dec 2047 12:47:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-uk</language>
+    <lastBuildDate>Thu, 12 Dec 2047 12:47:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Warped</title>
-      <link>https://example.com/categories/warped/</link>
+      <link>/categories/warped.html</link>
       <pubDate>Thu, 12 Dec 2047 12:47:00 +0000</pubDate>
       
-      <guid>https://example.com/categories/warped/</guid>
+      <guid>/categories/warped.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>WorkSpace</title>
-      <link>https://example.com/categories/workspace/</link>
+      <link>/categories/workspace.html</link>
       <pubDate>Sun, 10 Apr 2011 13:36:15 +0000</pubDate>
       
-      <guid>https://example.com/categories/workspace/</guid>
+      <guid>/categories/workspace.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Janahara</title>
-      <link>https://example.com/categories/janahara/</link>
+      <link>/categories/janahara.html</link>
       <pubDate>Fri, 02 Jul 2010 11:39:28 +0000</pubDate>
       
-      <guid>https://example.com/categories/janahara/</guid>
+      <guid>/categories/janahara.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Infodump</title>
-      <link>https://example.com/categories/infodump/</link>
+      <link>/categories/infodump.html</link>
       <pubDate>Wed, 19 Aug 2009 23:12:47 +0000</pubDate>
       
-      <guid>https://example.com/categories/infodump/</guid>
+      <guid>/categories/infodump.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Brant</title>
-      <link>https://example.com/categories/brant/</link>
+      <link>/categories/brant.html</link>
       <pubDate>Sun, 02 Aug 2009 15:58:30 +0000</pubDate>
       
-      <guid>https://example.com/categories/brant/</guid>
+      <guid>/categories/brant.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Life After WorkSpace</title>
-      <link>https://example.com/categories/life-after-workspace/</link>
+      <link>/categories/life-after-workspace.html</link>
       <pubDate>Sun, 02 Aug 2009 15:58:30 +0000</pubDate>
       
-      <guid>https://example.com/categories/life-after-workspace/</guid>
+      <guid>/categories/life-after-workspace.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Operator 1338</title>
-      <link>https://example.com/categories/operator-1338/</link>
+      <link>/categories/operator-1338.html</link>
       <pubDate>Tue, 19 May 2009 20:45:26 +0000</pubDate>
       
-      <guid>https://example.com/categories/operator-1338/</guid>
+      <guid>/categories/operator-1338.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pardis</title>
-      <link>https://example.com/categories/pardis/</link>
+      <link>/categories/pardis.html</link>
       <pubDate>Sun, 19 Apr 2009 15:50:55 +0000</pubDate>
       
-      <guid>https://example.com/categories/pardis/</guid>
+      <guid>/categories/pardis.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tad Revert</title>
-      <link>https://example.com/categories/tad-revert/</link>
+      <link>/categories/tad-revert.html</link>
       <pubDate>Thu, 31 Jul 2008 20:27:50 +0000</pubDate>
       
-      <guid>https://example.com/categories/tad-revert/</guid>
+      <guid>/categories/tad-revert.html</guid>
       <description></description>
     </item>
     
