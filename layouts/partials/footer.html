@@ -1,5 +1,10 @@
 <footer class="site-footer">
-  •<br />
+  {{ if not .IsHome }}
+    <h3 class="home">
+      <a href='{{ .Site.BaseURL | relURL }}'>{{ .Site.Params.Title | safeHTML }}</a>
+    </h3>
+  {{ end }}
+  
   <span class="owner">©{{ now.Year }} {{ .Site.Params.authorname }}</span><br />
 
   {{ range .Site.Menus.sources }}
