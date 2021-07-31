@@ -11,6 +11,12 @@
     <article>
       {{ .Content }}
     </article>
+    
+    <nav>
+      {{ with .NextInSection }}
+      <h3 class="go-center">&rarr; <a class="next" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h3>
+      {{ end }}
+    </nav>
 
     {{ partial "nav.html" . }}
 

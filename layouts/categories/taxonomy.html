@@ -8,19 +8,19 @@
     {{ partial "header.html" . }}
       
     {{ .Content }}
-    
+ 
     <article>
       <ul>
-      {{ range .Data.Pages.ByDate }}
+      {{ range .Data.Terms.Alphabetical }}
         {{/* Unnecessary slicing of MD5 hashes. Why you ask? Good question. */}}
-        {{ $md5 := md5 .Title }}
+        {{ $md5 := md5 .Page.Title }}
         {{ $md5len := int (strings.RuneCount $md5) }}
         <li>
-          <meta name="format-detection" content="telephone=no">
+          <span><meta name="format-detection" content="telephone=no">
           {{ slicestr $md5 (sub $md5len 3) $md5len }}.{{ slicestr $md5 0 3 }}
           {{/* .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006") */}}
-          </meta> <glyph>&rarr;</glyph>
-          <a href="{{.RelPermalink}}">{{.Title | markdownify}}</a>
+          </meta></span>
+          <a href="{{ .Page.RelPermalink }}">{{ .Page.Title | markdownify}}</a>
         </li>
         {{ end }}
       </ul>

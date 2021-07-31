@@ -18,18 +18,10 @@
     
     <article>
       <ul>
-      {{ range .Data.Pages.ByDate }}
-        {{/* Unnecessary slicing of MD5 hashes. Why you ask? Good question. */}}
-        {{ $md5 := md5 .Title }}
-        {{ $md5len := int (strings.RuneCount $md5) }}
-        <li>
-          <span><meta name="format-detection" content="telephone=no">
-          {{ slicestr $md5 (sub $md5len 3) $md5len }}.{{ slicestr $md5 0 3 }}
-          </meta></span>
-          <a href="{{.RelPermalink}}">{{.Title | markdownify}}</a>
-        </li>
+        {{ range where .Site.RegularPages "Section" "warped" }}
+            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
         {{ end }}
-      </ul>
+    </ul>
     </article>
 
     {{ partial "nav.html" . }}

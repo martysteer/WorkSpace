@@ -35,6 +35,9 @@ menu:
     - name: Chapters
       url: /chapters.html
       weight: -9
+    - name: Posts
+      url: /posts.html
+      weight: -8
     - name: Categories
       url: /categories.html
       weight: -7
