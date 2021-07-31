@@ -89,6 +89,9 @@ h3.home {
 }
 
 /* Site navs */
+header {
+    padding: 3em 0 2em;
+}
 footer > *+*, .site-nav > *+* {
     margin-left: 0;
 }
@@ -197,6 +200,21 @@ ol li {
 }
 ol li::marker {
     content: counter(list-item) " →";
+    font-family: Karrik, Arial, sans-serif;
+}
+ul {
+    list-style: none;
+    margin-left: 0.5em;
+}
+ul li {
+    color: #d0cda9;
+}
+ul li span {
+    width: 80px;
+
+}
+ul li span::after {
+    content: " →";
     font-family: Karrik, Arial, sans-serif;
 }
 
