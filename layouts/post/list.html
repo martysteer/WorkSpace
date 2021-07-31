@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+
+<body class="calligraphic">
+  <div class="container">
+    {{ partial "header.html" . }}
+    
+    {{ .Content }}
+    
+    {{ range sort (where site.RegularPages.ByWeight "Type" "in" "post") }}
+    <article>
+        {{ .Render "list-item" }}
+    </article>
+    {{ end }}
+
+    {{ partial "nav.html" . }}
+    {{ partial "footer.html" . }}
+
+  </div>
+</body>
+</html>

@@ -7,22 +7,19 @@
   <main class="container">
 
     {{ partial "header.html" . }}
-  
 
     <article>
       {{ .Content }}
     </article>
-    
-    
-    {{ with .NextInSection }}
-    <nav>  
-      <h3 class="go-center">&rarr; <a class="next" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h3>
-    </nav>
-    {{ end }}
 
     {{ partial "nav.html" . }}
+
     {{ partial "footer.html" . }}
+
   </main>
+
+  {{ partial "highlight" . }}
+
 </body>
 
 </html>
