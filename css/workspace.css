@@ -39,6 +39,42 @@
 
 
 
+/* CSS animations */
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+
+/* Whole page flickers, then headings flicker a bit longer*/
+body {
+    animation-duration: 0.01s;
+    animation-name: textflicker;
+    animation-delay: 0s;
+    animation-iteration-count: 50;
+    animation-direction: alternate;      
+}
+/*body.front {
+    animation-iteration-count: infinite;
+}*/
+h1, h2, h3, nav.front-nav,
+nav.head-nav,
+footer.site-footer
+ {
+    animation-duration: 0.1s;
+    animation-name: textflicker;
+    animation-delay: 0s;
+    animation-iteration-count: 50;
+    animation-direction: alternate;    
+}
+
+
+
+
 /* main elements */
 * {
     margin: 0;
@@ -95,6 +131,7 @@ header {
 footer > *+*, .site-nav > *+* {
     margin-left: 0;
 }
+
 
 nav.front-nav,
 nav.head-nav,
@@ -218,4 +255,4 @@ ul li span::after {
     font-family: Karrik, Arial, sans-serif;
 }
 
-/*bold link colour #d0cda9 */
+/*bold link colour #d0cda9 
