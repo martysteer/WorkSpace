@@ -55,7 +55,7 @@ body {
     animation-duration: 0.01s;
     animation-name: textflicker;
     animation-delay: 0s;
-    animation-iteration-count: 50;
+    animation-iteration-count: 100;
     animation-direction: alternate;      
 }
 /*body.front {
@@ -65,10 +65,10 @@ h1, h2, h3, nav.front-nav,
 nav.head-nav,
 footer.site-footer
  {
-    animation-duration: 0.1s;
+    animation-duration: 0.01s;
     animation-name: textflicker;
     animation-delay: 0s;
-    animation-iteration-count: 50;
+    animation-iteration-count: 500;
     animation-direction: alternate;    
 }
 
@@ -94,8 +94,8 @@ body {
 }
 a {
     color: #ccc;
-    text-decoration: underline;
-    /*border-bottom: 1px solid #ccc;*/
+    /*text-decoration: underline;*/
+    border-bottom: none;
     transition: .5s ease;
 }
 .flex-container {
@@ -126,7 +126,7 @@ h3.home {
 
 /* Site navs */
 header {
-    padding: 3em 0 2em;
+    padding: 3em 0 1em;
 }
 footer > *+*, .site-nav > *+* {
     margin-left: 0;
