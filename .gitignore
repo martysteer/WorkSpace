@@ -20,3 +20,6 @@ _gen
 
 .DS_Store
 **/.DS_Store
+
+static/glitch
+static/*.zip
