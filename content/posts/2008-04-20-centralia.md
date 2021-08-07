@@ -24,13 +24,13 @@ To: WorkSpace Operator Monitoring (UK) [Alejandro_fernandez@workspace.world](mai
 **Report focus**: Atypical employee behaviour (Filter: Known downtime anti-social conduct variants)
 
 **A.M. Session (start time: 07:30, end time: 11:45)**\
-Operator 1338 (hereafter referred to as: _N_) demonstrated 4 distinct, separate incidents of aberrant, atypical behavioural modifications outside of his known comportment norms. As follows: 
+Operator 1338 (hereafter referred to as: _N_) demonstrated 4 distinct, separate incidents of aberrant, atypical behavioural modifications outside of his known comportment norms. As follows: 
 
 **07:32**\
-_N_ greeted Xiu Chen Wong (VP Job Maintenance) with what appeared to be a gift (N.B.: Standard remote TraceGuard bomb sniffing protocol was actioned prior to object handover). Camera resolution was insufficient to precisely determine the nature of the gift; however, this agent considered an organic, fruit ovoid measuring 10.4 centimetres a low risk to aforementioned management personnel. 
+_N_ greeted Xiu Chen Wong (VP Job Maintenance) with what appeared to be a gift (N.B.: Standard remote TraceGuard bomb sniffing protocol was actioned prior to object handover). Camera resolution was insufficient to precisely determine the nature of the gift; however, this agent considered an organic, fruit ovoid measuring 10.4 centimetres a low risk to aforementioned management personnel. 
 
 **08:13**\
-_N_ volunteered to assist with setting up the first team building fun task. Laser microphone pickups indicate _N_ directing above-normal volume encouragements to his team; facial expression recognition algorithms indicated resultant distaste emanating from 4 other team members (IDs appended).
+_N_ volunteered to assist with setting up the first team building fun task. Laser microphone pickups indicate _N_ directing above-normal volume encouragements to his team; facial expression recognition algorithms indicated resultant distaste emanating from 4 other team members (IDs appended).
 
 **10:01**\
 During the refreshment break _N_ avoided the sugar-rich brunch confections and authorised caffeine beverages. This agent noted that _N_ consumed/imbibed homemade nourishment; audio pickups inferred from self-directed comments by _N_ that it was partially soy based. This agent is unable to extrapolate the relevance of the following comment by _N_:

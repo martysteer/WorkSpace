@@ -19,11 +19,11 @@ Latterly legitimatised via a number of degree and post-graduate level courses in
 > **Anxiety denial**: OCD levels of concern about security of winner designator (ticket/estub/SMS etc).
 > **Discretion flip-flop**: Elation stage, wild promises regretted in a fug of hangover.
 > **Belief curve**: Dawning realisation that the recipient can now purchase any amount of shiny crap they want.
-> **Consumer phase**: Profligate period of conspicuous consumption, characterised by scant regard for tastes, appropriateness or dimensional suitability for the pre-win living space. 
+> **Consumer phase**: Profligate period of conspicuous consumption, characterised by scant regard for tastes, appropriateness or dimensional suitability for the pre-win living space. 
 
 Janahara was not particularly intrinsically more discreet, or tasteful, or psychologically balanced than the average winner; it was just that nine years of a slum dwelling childhood, followed by nearly twenty five years of adulthood under the thumb of Iqbal Karim at the Madhom yard had equipped him with only a very specialised set of societal tools. He could have discussed at some length the importance of territorial boundary maintenance in male-only habitation environments, or drone level workplace ingratiation techniques—he could not however name this year’s Big Brother contestants (possibly though he might have approved of the current show format: contestants were now vying for critical medical procedures for both themselves and their families). 
 
-The result of his privation and relative isolation meant that Janahara was a kind of a cripple, mostly lacking in the ability to consume correctly. As a result, his quarter billion euros paradoxically lacked some of the impact that it might have for another, more media-reflexive winner. 
+The result of his privation and relative isolation meant that Janahara was a kind of a cripple, mostly lacking in the ability to consume correctly. As a result, his quarter billion euros paradoxically lacked some of the impact that it might have for another, more media-reflexive winner. 
 
 He had a shit phone, a small boat, a dumb computer that was mostly left switched off in his small office, and he had stayed in Dhaka. This had not made him invisible (off-grid living was a paranoid survivalist wet dream with no scope in the current reality): his boat was routinely pinged by the creaky Dhaka ANPR network when he went out (as were all legal vehicles), and a record of his postaghar purchase was logged and easily accessible at the government database at Curzon Hall. 
 
