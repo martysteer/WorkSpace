@@ -106,6 +106,8 @@ const getImageTexture = (image, density = 1) => {
   canvas.style.width = `${width}px`;
   canvas.style.height = `${height}px`;
 
+  ctx.fillStyle='red';
+  ctx.fillRect(0,0,width * density, height * density);
   ctx.drawImage(image, 0, 0, width * density, height * density);
 
   return canvas;
@@ -136,8 +138,13 @@ const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({
   antialias: false });
 
-renderer.setSize(width, height);
+renderer.setSize(width/3, height/3);
+
 document.body.appendChild(renderer.domElement);
+
+console.log(document.body);
+//.appendChild(renderer.domElement);
+
 
 function setupScene() {
   lightSource = new THREE.Object3D();
@@ -150,7 +157,7 @@ function setupScene() {
 
   const img = new Image();
   img.src = '../images/exoskel.png';
-  img.crossOrigin = 'Anonymous';
+  // img.crossOrigin = 'Anonymous';
 
   img.onload = function () {
     const itemTexture = new THREE.Texture(
@@ -257,7 +264,7 @@ function update() {
 
 function render() {
   camera.layers.set(OCCLUSION_LAYER);
-  //renderer.setClearColor(0x000000);
+  // renderer.setClearColor(0x000000);
   occlusionComposer.render();
 
   camera.layers.set(DEFAULT_LAYER);
@@ -358,21 +365,21 @@ function setupGUI() {
   folder.open();
 }
 
-function addRenderTargetImage() {
-  const material = new THREE.ShaderMaterial(THREE.PassThroughShader);
-  material.uniforms.tDiffuse.value = occRenderTarget.texture;
+// function addRenderTargetImage() {
+//   const material = new THREE.ShaderMaterial(THREE.PassThroughShader);
+//   material.uniforms.tDiffuse.value = occRenderTarget.texture;
 
-  const mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(2, 2), material);
-  composer.passes[1].scene.add(mesh);
-  mesh.visible = false;
+//   const mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(2, 2), material);
+//   composer.passes[1].scene.add(mesh);
+//   mesh.visible = false;
 
-  const folder = gui.addFolder('Light Pass Render Image');
-  folder.add(mesh, 'visible');
-  folder.open();
-}
+//   const folder = gui.addFolder('Light Pass Render Image');
+//   folder.add(mesh, 'visible');
+//   folder.open();
+// }
 
 setupScene();
 setupPostprocessing();
 onFrame();
 setupGUI();
-addRenderTargetImage();
+// addRenderTargetImage();
