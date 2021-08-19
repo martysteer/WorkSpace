@@ -1,0 +1,10 @@
+#hologram {
+    /*float: left;*/
+    /*position: absolute;*/
+    /*width: 200px;*/
+    /*left: 60px;*/
+}
+
+.hologram canvas {
+  /*display: block;*/
+}

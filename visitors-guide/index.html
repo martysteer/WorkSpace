@@ -34,9 +34,9 @@
   
 
     <article>
-      <!-- raw HTML omitted -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
+
 <script src='https://unpkg.com/three@0.83.0'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/CopyShader.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/EffectComposer.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/RenderPass.js'></script>
@@ -46,14 +46,24 @@
 <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/FilmShader.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/LuminosityHighPassShader.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/UnrealBloomPass.js'></script>
+
 <script src='https://cdn.rawgit.com/felixturner/bad-tv-shader/master/BadTVShader.js'></script>
 
-<script src='../hologram/hologram.js'></script>
 
 
-<div class="hologram" id="hologram">
-	
+
+
+
+<link rel="stylesheet" href='../js/hologram/hologram.css'>
+<script type='text/javascript' src='../js/hologram/Scene.js'></script>
+<script type='text/javascript' src='../js/hologram/init.js'></script>
+
+
+<div id="hologram">
+	<img src='../images/blaster.png' />
+	<canvas class="scene"></canvas>
 </div>
+<!-- raw HTML omitted -->
 <p><a href="https://www.webarchive.org.uk/en/ukwa/search?text=http%3A%2F%2Fwww.kilbot.co.uk%2Fwp-content%2Fuploads%2F2009%2F05%2Fworkspace05wht_alt-255x300.jpg&amp;search_location=full_text&amp;reset_filters=false&amp;content_type=Web+Page"><img src="../wp-content/uploads/2009/05/workspace05wht_alt-255x300.jpg" alt="WorkSpace Operator">
 </a></p>
 <p>Whether you are reading this at my industrial tribunal, as a data archaeologist student, or as drone level sysadmin clearing space off a grandfathered WorkSpace database, I hope it brings you some small distraction from the otherwise humdrum irritations of your work day.</p>
@@ -125,7 +135,7 @@
 
   
 
-  <!-- Build date: Wed, 18 Aug 2021 12:16:31 UTC -->
+  <!-- Build date: Thu, 19 Aug 2021 21:02:09 UTC -->
 </footer>
 
   </main>
