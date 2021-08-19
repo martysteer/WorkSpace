@@ -1,5 +1,6 @@
-<script src='https://unpkg.com/three@0.83.0'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
+
+<script src='https://unpkg.com/three@0.83.0'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/CopyShader.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/EffectComposer.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/RenderPass.js'></script>
@@ -9,11 +10,15 @@
 <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/FilmShader.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/LuminosityHighPassShader.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/UnrealBloomPass.js'></script>
+
 <script src='https://cdn.rawgit.com/felixturner/bad-tv-shader/master/BadTVShader.js'></script>
 
-<script src='/hologram/hologram.js'></script>
+
+<script src='/js/hologram/holoshaders.js'></script>
+<script src='/js/hologram/canvas-render.js'></script>
+<!-- <script src='/js/hologram/hologram.js'></script> -->
 
 
 <div class="hologram" id="hologram">
-	<!-- <img src='{{ .Get "src" | relURL }}' width="500px" height="500px" /> -->
+	<img src='{{ .Get "src" | relURL }}' />
 </div>

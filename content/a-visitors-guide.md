@@ -7,8 +7,8 @@ type: page
 url: /visitors-guide/
 ---
 
-<!-- {{<hologram/img src="images/blaster.png">}} -->
-{{<hologram/img src="images/exoskel.png">}}
+{{<hologram/img src="images/blaster.png">}}
+<!-- {{<hologram/img src="images/exoskel.png">}} -->
 
 [![WorkSpace Operator](/wp-content/uploads/2009/05/workspace05wht_alt-255x300.jpg)
 ](https://www.webarchive.org.uk/en/ukwa/search?text=http%3A%2F%2Fwww.kilbot.co.uk%2Fwp-content%2Fuploads%2F2009%2F05%2Fworkspace05wht_alt-255x300.jpg&search_location=full_text&reset_filters=false&content_type=Web+Page)
