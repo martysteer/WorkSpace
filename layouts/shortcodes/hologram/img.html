@@ -14,11 +14,16 @@
 <script src='https://cdn.rawgit.com/felixturner/bad-tv-shader/master/BadTVShader.js'></script>
 
 
-<script src='/js/hologram/holoshaders.js'></script>
-<script src='/js/hologram/canvas-render.js'></script>
+<!-- <script src='/js/hologram/holoshaders.js'></script> -->
+<!-- <script src='/js/hologram/canvas-render.js'></script> -->
 <!-- <script src='/js/hologram/hologram.js'></script> -->
 
+<link rel="stylesheet" href='{{ "js/hologram/hologram.css" | relURL }}'>
+<script type='text/javascript' src='{{ "/js/hologram/Scene.js" | relURL }}'></script>
+<script type='text/javascript' src='{{ "/js/hologram/init.js" | relURL }}'></script>
 
-<div class="hologram" id="hologram">
+
+<div id="hologram">
 	<img src='{{ .Get "src" | relURL }}' />
+	<canvas class="scene"></canvas>
 </div>

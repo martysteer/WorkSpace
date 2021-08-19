@@ -1,7 +1,10 @@
-body{
-  /*background: #000;*/
+#hologram {
+    /*float: left;*/
+    /*position: absolute;*/
+    /*width: 200px;*/
+    /*left: 60px;*/
 }
 
-canvas{
-  display: block;
+.hologram canvas {
+  /*display: block;*/
 }
