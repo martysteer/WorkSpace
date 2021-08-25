@@ -153,7 +153,7 @@ class HoloScene {
   constructor(elementID = 'hologram') {
     this.container = document.getElementById(elementID);
     this.img = this.container.querySelector('img');
-    this.canvas = this.container.querySelector('.scene');
+    this.canvas = this.container.querySelector('canvas');
 
     // console.log(this.container, this.canvas, this.img);
 
@@ -180,7 +180,7 @@ class HoloScene {
     // ??
     this.occRenderTarget = new THREE.WebGLRenderTarget(this.img.width * renderScale, this.img.height * renderScale);
     this.occlusionComposer = new THREE.EffectComposer(this.renderer, this.occRenderTarget);
-    this.composer = new THREE.EffectComposer(this.renderer);
+    // this.composer = new THREE.EffectComposer(this.renderer);
   }
 
 
@@ -194,13 +194,12 @@ class HoloScene {
     pointLight.position.set(25, 50, 25);
     this.scene.add(pointLight);
 
+    // this.lightSource = new THREE.Object3D();
+    // this.lightSource.position.x = 0;
+    // this.lightSource.position.y = -15;
+    // this.lightSource.position.z = -15;
 
-    this.lightSource = new THREE.Object3D();
-    this.lightSource.position.x = 0;
-    this.lightSource.position.y = -15;
-    this.lightSource.position.z = -15;
-
-  }
+  }  // end initLights()
 
 
   // ----------------------------------------------------------
@@ -231,10 +230,10 @@ class HoloScene {
     this.cube.position.x = -2;
     this.cube.position.y = 3;
     this.scene.add(this.cube);
-    
-    
+
+
     // The geometry of the holographic image is a simple plane
-    const itemGeo = new THREE.PlaneGeometry(9, 2.1);
+    const itemGeo = new THREE.PlaneGeometry(10, 2.1);
     const itemMaterial = new THREE.MeshBasicMaterial({
       transparent: true,
       opacity: 0.7
@@ -245,12 +244,12 @@ class HoloScene {
     // and draw the image into a canvas
     const density = 1
     var canvas = document.createElement("canvas");
-    canvas.width = this.img.width * density;
-    canvas.height = this.img.height * density;
+    // canvas.width = this.img.width * density;
+    // canvas.height = this.img.height * density;
     const ctx = canvas.getContext("2d")
     ctx.drawImage(this.img, 0, 0);
 
-    
+
     // Create new image and canvas for the Scene
     // and use the image canvas as the texture
     const newimg = new Image();
@@ -272,29 +271,31 @@ class HoloScene {
       parent.scene.add(parent.itemMesh);
 
       // Create occlusion materials/mesh and add to parent.scene
+      // (This is the holographic illumination layer on top)
       const occItemMaterial = new THREE.MeshBasicMaterial({
         color: lightColor
       });
       occItemMaterial.map = itemTexture;
-      
-      parent.occMesh = new THREE.Mesh(itemGeo, occItemMaterial); // class field
-      parent.occMesh.layers.set(OCCLUSION_LAYER);
-      parent.scene.add(parent.occMesh);
+
+      // parent.occMesh = new THREE.Mesh(itemGeo, occItemMaterial); // class field
+      // parent.occMesh.layers.set(OCCLUSION_LAYER);
+      // parent.scene.add(parent.occMesh);
     } // end newimg.onload function
 
-    // Add occlusion laters to camera
-    this.camera.layers.set(OCCLUSION_LAYER);
-    this.renderer.setClearColor(0x000000);
-    this.occlusionComposer.render();
+    // Render the occlusion composition layer
+    // this.camera.layers.set(OCCLUSION_LAYER);  // Layer 1
+    // this.renderer.setClearColor(0x000000);
+    // this.occlusionComposer.render();
 
-    this.camera.layers.set(DEFAULT_LAYER);
-    this.renderer.setClearColor(0x000000);
-    this.composer.render();
+    // Render the main composition later
+    // this.camera.layers.set(DEFAULT_LAYER); // Layer 0
+    // this.renderer.setClearColor(0x000000);
+    // this.composer.render();
 
     // this.renderer.render(this.scene, this.camera);
-    this.camera.position.z = 7; // Move camera back a bit
-    
-  }  // end setupScene()
+    this.camera.position.z = 4.5; // Move camera back a bit
+
+  } // end setupScene()
 
 
   // ----------------------------------------------------------
@@ -310,9 +311,11 @@ class HoloScene {
 
 
     // Swing rotate the hologram's image plane
+    // and animate the holographic illumination/occlusion layer
     if (this.itemMesh) {
       this.itemMesh.rotation.y = Math.sin(elapsed / 2) / 15;
       this.itemMesh.rotation.z = Math.cos(elapsed / 2) / 50;
+
       // this.occMesh.rotation.copy(this.itemMesh.rotation);
     }
 
@@ -323,9 +326,8 @@ class HoloScene {
 
     // These attribute updates will keep the canvas resized
     // to it's CSS container every frame
+    this.renderer.setSize(this.container.offsetWidth, this.container.offsetWidth);
     this.renderer.render(this.scene, this.camera);
-    this.renderer.setSize(this.img.width, this.img.height * 4);
-    // this.renderer.setSize(this.container.offsetWidth, this.container.offsetWidth);
 
     // Use this function for the animation loop
     requestAnimationFrame(this.update.bind(this));
@@ -347,55 +349,60 @@ class HoloScene {
     hBlur.uniforms.h.value = bluriness / width;
     vBlur.uniforms.v.value = bluriness / height;
 
-    // Bad TV Pass
+
+    // Bad TV Pass - VHS line effects
     this.badTVPass = new THREE.ShaderPass(THREE.BadTVShader);
     this.badTVPass.uniforms.distortion.value = 1.9;
     this.badTVPass.uniforms.distortion2.value = 1.2;
     this.badTVPass.uniforms.speed.value = 0.1;
     this.badTVPass.uniforms.rollSpeed.value = 0;
+console.log(this.badTVPass);
 
-    // Volumetric Light Pass
-    const vlPass = new THREE.ShaderPass(THREE.VolumetericLightShader);
-    this.vlShaderUniforms = vlPass.uniforms;
-    vlPass.needsSwap = false;
-
-    // Setup the Occlusion Composer (it is initialised in initScene)   
-    this.occlusionComposer.addPass(new THREE.RenderPass(this.scene, this.camera));
-    this.occlusionComposer.addPass(hBlur);
-    this.occlusionComposer.addPass(vBlur);
-    this.occlusionComposer.addPass(hBlur);
-    this.occlusionComposer.addPass(vBlur);
-    this.occlusionComposer.addPass(hBlur);
-    this.occlusionComposer.addPass(this.badTVPass);
-    this.occlusionComposer.addPass(vlPass);
-
-    // Bloom pass
-    this.bloomPass = new THREE.UnrealBloomPass(width / height, 0.5, .8, .3);
-
-    // Film pass
+    // Film pass - Grainy film effects
     this.filmPass = new THREE.ShaderPass(THREE.FilmShader);
     this.filmPass.uniforms.sCount.value = 1200;
     this.filmPass.uniforms.grayscale.value = false;
     this.filmPass.uniforms.sIntensity.value = 1.5;
     this.filmPass.uniforms.nIntensity.value = 0.2;
+console.log(this.filmPass);    
+
+    // Bloom pass - Neon saturation effects
+    this.bloomPass = new THREE.UnrealBloomPass(width / height, 0.5, .8, .3);
+
+
+
+    // // Volumetric Light Pass
+    // const vlPass = new THREE.ShaderPass(THREE.VolumetericLightShader);
+    // this.vlShaderUniforms = vlPass.uniforms;
+    // vlPass.needsSwap = false;
+
+    // // Setup the Occlusion Composer (it is initialised in initScene)   
+    // this.occlusionComposer.addPass(new THREE.RenderPass(this.scene, this.camera));
+    // this.occlusionComposer.addPass(hBlur);
+    // this.occlusionComposer.addPass(vBlur);
+    // this.occlusionComposer.addPass(hBlur);
+    // this.occlusionComposer.addPass(vBlur);
+    // this.occlusionComposer.addPass(hBlur);
+    // this.occlusionComposer.addPass(this.badTVPass);
+    // this.occlusionComposer.addPass(vlPass);
 
     // // Blend occRenderTarget into main render target 
-    const blendPass = new THREE.ShaderPass(THREE.AdditiveBlendingShader);
-    blendPass.uniforms.tAdd.value = this.occRenderTarget.texture;
-    blendPass.renderToScreen = true;
+    // const blendPass = new THREE.ShaderPass(THREE.AdditiveBlendingShader);
+    // blendPass.uniforms.tAdd.value = this.occRenderTarget.texture;
+    // blendPass.renderToScreen = true;
 
     // Main Effect Composer
     // This sets up postprocessing passes
     // First pass is to render the original scene.
     // Other render passes are defined above.
+    this.composer = new THREE.EffectComposer(this.renderer);
     this.composer.addPass(new THREE.RenderPass(this.scene, this.camera));
-    this.composer.addPass(this.bloomPass);
-    this.composer.addPass(this.badTVPass);
-    this.composer.addPass(this.filmPass);
-    this.composer.addPass(blendPass);
+    // this.composer.addPass(this.bloomPass);
+    // this.composer.addPass(this.badTVPass);
+    // this.composer.addPass(this.filmPass);
+
+    // this.composer.addPass(blendPass);  // blend the occlusion holographic layer with the image layer.
   }
-
-
 
 
 
