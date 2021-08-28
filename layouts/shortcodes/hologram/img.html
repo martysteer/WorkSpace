@@ -21,7 +21,4 @@
 <script type='module' src='{{ "/js/hologram/main.js" | relURL }}'></script>
 
 
-<div id="hologram">
-	<img src='{{ .Get "src" | relURL }}' />
-	<canvas id="scene"></canvas>
-</div>
+<div id="hologram" data-src='{{ .Get "src" | relURL }}' ></div>
