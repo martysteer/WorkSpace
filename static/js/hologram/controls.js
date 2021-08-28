@@ -1,4 +1,3 @@
-// import { OrbitControls } from 'https://unpkg.com/three@0.132.0/examples/jsm/controls/OrbitControls.js';
 import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
 
 

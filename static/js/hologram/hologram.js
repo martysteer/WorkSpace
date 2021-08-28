@@ -6,8 +6,6 @@
  * 
  * Modified, commented and adapted by Marty Steer, MythAxis Magazine, 2021
  **/
-import * as THREE from './three/build/three.module.js';
-
 import { createCamera } from './camera.js';
 import { createCube } from './cube.js';
 import { createLights } from './lights.js';
@@ -32,7 +30,6 @@ let loop;
 // ----------------------------------------------------------
 // Hologram.js
 // ----------------------------------------------------------
-
 class Hologram {
   // Pass a container element to use for the hologram.
   constructor(container) {
@@ -42,16 +39,20 @@ class Hologram {
     loop = new Loop(camera, scene, renderer);
     container.append(renderer.domElement);
 
-    // const controls = createControls(); // orbital controller (TODO: dat.gui)
+    const controls = createControls(camera, renderer.domElement); // orbital controller (TODO: dat.gui)
 
+    // Get all the lights and add to scene
+    const lights = createLights();
+    Object.values(lights).forEach(l => scene.add(l));
+
+    // Add meshes to scene
     const cube = createCube();
-    const light = createLights();
+    scene.add(cube);
 
     // Keep track of the objects to animate
-    loop.updatables.push(cube);
+    loop.updatables.push(controls, cube);
 
-    scene.add(cube, light);
-
+    // Make sure the canvas resizes when the window does
     const resizer = new Resizer(container, camera, renderer);
   }
 
