@@ -1,114 +1,63 @@
+/**
+ * Hologram Scene class for Holographic Projection of an image into a conatiner element
+ * 
+ * A Pen created on CodePen.io.
+ * Original URL: [https://codepen.io/peterhry/pen/egzjGR](https://codepen.io/peterhry/pen/egzjGR).
+ * 
+ * Modified, commented and adapted by Marty Steer, MythAxis Magazine, 2021
+ **/
+import * as THREE from 'https://unpkg.com/three@0.83.0/build/three.module.js';
 
-const theGUI = new dat.GUI();
-setupGUI(theGUI);
+import { createCamera } from './camera.js';
+import { createCube } from './cube.js';
+import { createLights } from './lights.js';
+import { createScene } from './scene.js';
 
-/* Set up the parameter configuration GUI (from codepen.io) */
-function setupGUI(aGUI) {
-  let folder,
-    min,
-    max,
-    step,
-    updateShaderLight = function() {
-      const p = lightSource.position.clone(),
-        vector = p.project(camera),
-        x = (vector.x + 1) / 2,
-        y = (vector.y + 1) / 2;
-      vlShaderUniforms.lightPosition.value.set(x, y);
+import { createRenderer } from './renderer.js';
+import { Resizer } from './Resizer.js';
+
+
+// ----------------------------------------------------------
+// Module scoped variables
+// NB: can only create one instance of Hologram()
+// ----------------------------------------------------------
+let camera;
+let renderer;
+let scene;
+
+
+// ----------------------------------------------------------
+// Hologram.js
+// ----------------------------------------------------------
+
+class Hologram {
+  // Pass a container element to use for the hologram.
+  constructor(container) {
+    camera = createCamera();
+    scene = createScene();
+    renderer = createRenderer();
+    container.append(renderer.domElement);
+
+    const cube = createCube();
+    const light = createLights();
+
+    scene.add(cube, light);
+
+    const resizer = new Resizer(container, camera, renderer);
+    resizer.onResize = () => { // implement resizer hook
+      this.render();
     };
+  }
 
-  updateShaderLight();
-
-  // Bloom Controls
-  folder = aGUI.addFolder('Bloom');
-  folder.add(bloomPass, 'radius').
-  min(0).
-  max(10).
-  name('Radius');
-  folder.add(bloomPass, 'threshold').
-  min(0).
-  max(1).
-  name('Threshold');
-  folder.add(bloomPass, 'strength').
-  min(0).
-  max(10).
-  name('Strength');
-  folder.open();
-
-  // Bad TV Controls
-  folder = aGUI.addFolder('TV');
-  folder.add(badTVPass.uniforms.distortion, 'value').
-  min(0).
-  max(10).
-  name('Distortion 1');
-  folder.add(badTVPass.uniforms.distortion2, 'value').
-  min(0).
-  max(10).
-  name('Distortion 2');
-  folder.add(badTVPass.uniforms.speed, 'value').
-  min(0).
-  max(1).
-  name('Speed');
-  folder.add(badTVPass.uniforms.rollSpeed, 'value').
-  min(0).
-  max(10).
-  name('Roll Speed');
-  folder.open();
-
-  // Light Controls
-  folder = aGUI.addFolder('Light Position');
-  folder.add(lightSource.position, 'x').
-  min(-50).
-  max(50).
-  onChange(updateShaderLight);
-  folder.add(lightSource.position, 'y').
-  min(-50).
-  max(50).
-  onChange(updateShaderLight);
-  folder.add(lightSource.position, 'z').
-  min(-50).
-  max(50).
-  onChange(updateShaderLight);
-  folder.open();
-
-  // Volumetric Light Controls
-  folder = aGUI.addFolder('Volumeteric Light Shader');
-  folder.add(vlShaderUniforms.exposure, 'value').
-  min(0).
-  max(1).
-  name('Exposure');
-  folder.add(vlShaderUniforms.decay, 'value').
-  min(0).
-  max(1).
-  name('Decay');
-  folder.add(vlShaderUniforms.density, 'value').
-  min(0).
-  max(10).
-  name('Density');
-  folder.add(vlShaderUniforms.weight, 'value').
-  min(0).
-  max(1).
-  name('Weight');
-  folder.add(vlShaderUniforms.samples, 'value').
-  min(1).
-  max(100).
-  name('Samples');
-
-  folder.open();
-}
+  // Render the scene
+  render() {
+    // draw a single frame
+    renderer.render(scene, camera);
+    console.log('hologram render()')
+  }
 
 
-function addRenderTargetImage() {
-  const material = new THREE.ShaderMaterial(THREE.PassThroughShader);
-  material.uniforms.tDiffuse.value = occRenderTarget.texture;
 
-  const mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(2, 2), material);
-  composer.passes[1].scene.add(mesh);
-  mesh.visible = false;
+} // end class HoloScene
 
-  const folder = gui.addFolder('Light Pass Render Image');
-  folder.add(mesh, 'visible');
-  folder.open();
-}
-
-
-addRenderTargetImage();
+export { Hologram };

@@ -1,3 +1,13 @@
+/**
+ * Hologram shaders for Holographic Projection
+ * A Pen created on CodePen.io.
+ * Original URL: [https://codepen.io/peterhry/pen/egzjGR](https://codepen.io/peterhry/pen/egzjGR).
+ * 
+ * THREE.VolumetericLightShader
+ * THREE.PassThroughShader
+ * THREE.AdditiveBlendingShader
+ * 
+ **/
 THREE.VolumetericLightShader = {
   uniforms: {
     tDiffuse: {
@@ -67,6 +77,8 @@ THREE.VolumetericLightShader = {
   join("\n")
 };
 
+
+// ----------------------------------------------------------
 THREE.AdditiveBlendingShader = {
   uniforms: {
     tDiffuse: {
@@ -100,6 +112,8 @@ THREE.AdditiveBlendingShader = {
   join("\n")
 };
 
+
+// ----------------------------------------------------------
 THREE.PassThroughShader = {
   uniforms: {
     tDiffuse: {
