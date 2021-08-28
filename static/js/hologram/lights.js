@@ -1,4 +1,4 @@
-import { DirectionalLight } from 'https://unpkg.com/three@0.83.0/build/three.module.js';
+import { DirectionalLight } from './three/build/three.module.js';
 
 function createLights() {
   // Create a directional light

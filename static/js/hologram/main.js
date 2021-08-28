@@ -4,7 +4,7 @@ import { Hologram } from './Hologram.js'
 function main() {
     const container = document.querySelector('#hologram');
     const holo = new Hologram(container);
-    holo.render();
+    holo.start();
 }
 
 // Call main and start the hologram

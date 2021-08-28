@@ -6,15 +6,17 @@
  * 
  * Modified, commented and adapted by Marty Steer, MythAxis Magazine, 2021
  **/
-import * as THREE from 'https://unpkg.com/three@0.83.0/build/three.module.js';
+import * as THREE from './three/build/three.module.js';
 
 import { createCamera } from './camera.js';
 import { createCube } from './cube.js';
 import { createLights } from './lights.js';
 import { createScene } from './scene.js';
 
+import { createControls } from './controls.js';
 import { createRenderer } from './renderer.js';
 import { Resizer } from './Resizer.js';
+import { Loop } from './Loop.js';
 
 
 // ----------------------------------------------------------
@@ -24,6 +26,7 @@ import { Resizer } from './Resizer.js';
 let camera;
 let renderer;
 let scene;
+let loop;
 
 
 // ----------------------------------------------------------
@@ -36,27 +39,35 @@ class Hologram {
     camera = createCamera();
     scene = createScene();
     renderer = createRenderer();
+    loop = new Loop(camera, scene, renderer);
     container.append(renderer.domElement);
+
+    // const controls = createControls(); // orbital controller (TODO: dat.gui)
 
     const cube = createCube();
     const light = createLights();
 
+    // Keep track of the objects to animate
+    loop.updatables.push(cube);
+
     scene.add(cube, light);
 
     const resizer = new Resizer(container, camera, renderer);
-    resizer.onResize = () => { // implement resizer hook
-      this.render();
-    };
   }
 
   // Render the scene
   render() {
     // draw a single frame
     renderer.render(scene, camera);
-    console.log('hologram render()')
   }
 
+  start() {
+    loop.start();
+  }
 
+  stop() {
+    loop.stop();
+  }
 
 } // end class HoloScene
 
