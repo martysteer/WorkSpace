@@ -6,15 +6,15 @@
  * 
  * Modified, commented and adapted by Marty Steer, MythAxis Magazine, 2021
  **/
-import * as THREE from 'https://unpkg.com/three@0.83.0/build/three.module.js';
-
 import { createCamera } from './camera.js';
 import { createCube } from './cube.js';
 import { createLights } from './lights.js';
 import { createScene } from './scene.js';
 
+import { createControls } from './controls.js';
 import { createRenderer } from './renderer.js';
 import { Resizer } from './Resizer.js';
+import { Loop } from './Loop.js';
 
 
 // ----------------------------------------------------------
@@ -24,39 +24,51 @@ import { Resizer } from './Resizer.js';
 let camera;
 let renderer;
 let scene;
+let loop;
 
 
 // ----------------------------------------------------------
 // Hologram.js
 // ----------------------------------------------------------
-
 class Hologram {
   // Pass a container element to use for the hologram.
   constructor(container) {
     camera = createCamera();
     scene = createScene();
     renderer = createRenderer();
+    loop = new Loop(camera, scene, renderer);
     container.append(renderer.domElement);
 
+    const controls = createControls(camera, renderer.domElement); // orbital controller (TODO: dat.gui)
+
+    // Get all the lights and add to scene
+    const lights = createLights();
+    Object.values(lights).forEach(l => scene.add(l));
+
+    // Add meshes to scene
     const cube = createCube();
-    const light = createLights();
+    scene.add(cube);
 
-    scene.add(cube, light);
+    // Keep track of the objects to animate
+    loop.updatables.push(controls, cube);
 
+    // Make sure the canvas resizes when the window does
     const resizer = new Resizer(container, camera, renderer);
-    resizer.onResize = () => { // implement resizer hook
-      this.render();
-    };
   }
 
   // Render the scene
   render() {
     // draw a single frame
     renderer.render(scene, camera);
-    console.log('hologram render()')
   }
 
+  start() {
+    loop.start();
+  }
 
+  stop() {
+    loop.stop();
+  }
 
 } // end class HoloScene
 
