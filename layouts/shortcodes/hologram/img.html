@@ -1,6 +1,6 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
 
-<script src='https://unpkg.com/three@0.83.0'></script>
+<!-- <script src='https://unpkg.com/three@0.83.0'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/CopyShader.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/EffectComposer.js'></script>
 <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/RenderPass.js'></script>
@@ -12,15 +12,13 @@
 <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/UnrealBloomPass.js'></script>
 
 <script src='https://cdn.rawgit.com/felixturner/bad-tv-shader/master/BadTVShader.js'></script>
+ -->
 
-
-<!-- <script src='/js/hologram/holoshaders.js'></script> -->
-<!-- <script src='/js/hologram/canvas-render.js'></script> -->
-<!-- <script src='/js/hologram/hologram.js'></script> -->
 
 <link rel="stylesheet" href='{{ "js/hologram/hologram.css" | relURL }}'>
+<script type='text/javascript' src='{{ "/js/hologram/holoshaders.js" | relURL }}'></script>
 <script type='text/javascript' src='{{ "/js/hologram/Scene.js" | relURL }}'></script>
-<script type='text/javascript' src='{{ "/js/hologram/init.js" | relURL }}'></script>
+<script type='module' src='{{ "/js/hologram/init.js" | relURL }}'></script>
 
 
 <div id="hologram">
