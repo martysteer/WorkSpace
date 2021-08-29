@@ -8,6 +8,7 @@
  **/
 import { createCamera } from './camera.js';
 import { createCube } from './cube.js';
+import { createPlane } from './plane.js';
 import { createLights } from './lights.js';
 import { createScene } from './scene.js';
 
@@ -31,6 +32,7 @@ let loop;
 // Hologram.js
 // ----------------------------------------------------------
 class Hologram {
+
   // Pass a container element to use for the hologram.
   constructor(container) {
     camera = createCamera();
@@ -49,27 +51,38 @@ class Hologram {
     const cube = createCube();
     scene.add(cube);
 
+    // Add image plane (using data-src value from container)
+    console.log(container.dataset);
+    const plane = createPlane(container.dataset.src);
+    scene.add(plane);
+
+
     // Keep track of the objects to animate
-    loop.updatables.push(controls, cube);
+    loop.updatables.push(controls, cube, plane);
 
     // Make sure the canvas resizes when the window does
     const resizer = new Resizer(container, camera, renderer);
   }
 
-  // Render the scene
+
+  // Manually render the scene
   render() {
-    // draw a single frame
     renderer.render(scene, camera);
   }
 
+
+  // Start the rendering animation
   start() {
     loop.start();
   }
 
+
+  // Stop the rendering animation
   stop() {
     loop.stop();
   }
 
 } // end class HoloScene
+
 
 export { Hologram };
