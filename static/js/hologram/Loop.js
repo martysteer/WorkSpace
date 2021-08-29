@@ -1,7 +1,13 @@
+/**
+ * 
+ **/
 import { Clock } from './three/build/three.module.js';
 
 const clock = new Clock();
 
+// ----------------------------------------------------------
+// Hologram.js
+// ----------------------------------------------------------
 class Loop {
   constructor(camera, scene, renderer) {
     this.camera = camera;
@@ -28,11 +34,13 @@ class Loop {
   // Update a single animation frame for each updatable object
   tick() {
     const delta = clock.getDelta(); // get miliseconds since last frame
+    const elapsed = clock.getElapsedTime();
 
     for (const object of this.updatables) {
-      object.tick(delta);
+      object.tick(delta, elapsed);
     }
-  }
-}
+  }  // end tick()
+
+}  // end class Loop
 
 export { Loop }
