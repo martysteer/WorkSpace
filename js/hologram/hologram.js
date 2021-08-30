@@ -17,6 +17,20 @@ import { createRenderer } from './renderer.js';
 import { Resizer } from './Resizer.js';
 import { Loop } from './Loop.js';
 
+import { 
+  createMainComposer,
+  createOcclusionComposer
+} from './composer.js';
+
+import {
+  MathUtils,
+  Mesh,
+  MeshBasicMaterial,
+  MeshStandardMaterial,
+  PlaneGeometry,
+  TextureLoader,
+} from './three/build/three.module.js';
+
 
 // ----------------------------------------------------------
 // Module scoped variables
@@ -26,7 +40,16 @@ let camera;
 let renderer;
 let scene;
 let loop;
+let mainComposer;
+let occlusionComposer;
 
+
+// ----------------------------------------------------------
+// Constants
+// ----------------------------------------------------------
+const lightColor = 0x0099ff;
+const DEFAULT_LAYER = 0;
+const OCCLUSION_LAYER = 1;
 
 // ----------------------------------------------------------
 // Hologram.js
@@ -38,10 +61,15 @@ class Hologram {
     camera = createCamera();
     scene = createScene();
     renderer = createRenderer();
+
+    // Hook up the render loop object
     loop = new Loop(camera, scene, renderer);
+
+    // Append the canvas to the web page
     container.append(renderer.domElement);
 
-    const controls = createControls(camera, renderer.domElement); // orbital controller (TODO: dat.gui)
+    // Add a basic orbital controller (TODO: dat.gui)
+    const controls = createControls(camera, renderer.domElement);
 
     // Get all the lights and add to scene
     const lights = createLights();
@@ -49,25 +77,37 @@ class Hologram {
 
     // Add meshes to scene
     const cube = createCube();
-    scene.add(cube);
+    // scene.add(cube);
 
     // Add image plane (using data-src value from container)
-    console.log(container.dataset);
-    const plane = createPlane(container.dataset.src);
+    const plane = createPlane(container.dataset.src);    
     scene.add(plane);
 
+    // Clone the plane to turn it into the occlusion layer.
+    const occlusionPlane = createPlane(container.dataset.src);
+    occlusionPlane.material.color.setHex(lightColor);
+    // occlusionPlane.layers.set(OCCLUSION_LAYER);  // used in multipass rendering
+    occlusionPlane.position.z = -0.3;
+    // scene.add(occlusionPlane);
 
     // Keep track of the objects to animate
-    loop.updatables.push(controls, cube, plane);
+    loop.updatables.push(controls, cube, plane, occlusionPlane);
 
     // Make sure the canvas resizes when the window does
     const resizer = new Resizer(container, camera, renderer);
+
+    // Setup postprocessing - we do this down here so the scene and objects 
+    // and sizes have initialised
+    mainComposer = createMainComposer(container, camera, scene, renderer);
+    loop.updatables.push(mainComposer);  // to tick the composer passes
+    loop.composers.push(mainComposer); // to give the loop composer layers to render
+
   }
 
 
   // Manually render the scene
   render() {
-    renderer.render(scene, camera);
+    loop.render();
   }
 
 
