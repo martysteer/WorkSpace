@@ -10,9 +10,10 @@ import { HorizontalBlurShader } from './three/examples/jsm/shaders/HorizontalBlu
 import { VerticalBlurShader } from './three/examples/jsm/shaders/VerticalBlurShader.js';
 import { LuminosityHighPassShader } from './three/examples/jsm/shaders/LuminosityHighPassShader.js';
 
-// @src https://github.com/mbalex99/threejs-unrealbloompass-transparent-background-example
-// modified to a local js module
-import { UnrealBloomPass } from './shaders/threejs-unrealbloompass-transparent-background-example-master/TransparentBackgroundFixedUnrealBloomPass.js';
+
+// modified UnrealBloomPass.js to add alpha
+import { UnrealBloomPass } from './three/examples/jsm/postprocessing/UnrealBloomPass.js';
+import { TransparentUnrealBloomPass } from './shaders/TransparentUnrealBloomPass.js';
 
 
 // @src https://github.com/felixturner/bad-tv-shader
@@ -25,13 +26,14 @@ function createMainComposer(container, camera, scene, renderer) {
   const composer = new EffectComposer(renderer);
   composer.addPass(new RenderPass(scene, camera));
 
-  // Bloom pass
-  // const bloomPass = new UnrealBloomPass(container.clientHeight / container.clientHeight, 0.5, .8, .3);
-  // composer.addPass(bloomPass);
+  // Bloom pass - using custom alpha shader
+  // const boomPass = new UnrealBloomPass(container.clientHeight / container.clientHeight, 0.5, .8, .3);
+  const boomPass = new TransparentUnrealBloomPass(container.clientHeight / container.clientHeight, 0.5, .8, .3);
+  composer.addPass(boomPass);
 
   // Sepia shadder
-  const sepiaPass = new ShaderPass(SepiaShader);
-  composer.addPass(sepiaPass);
+  // const sepiaPass = new ShaderPass(SepiaShader);
+  // composer.addPass(sepiaPass);
 
 
   // Bad TV Pass
