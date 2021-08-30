@@ -1,19 +1,5 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
 
-<!--
-<script src='https://unpkg.com/three@0.83.0/examples/js/shaders/CopyShader.js'></script>
-<script src='https://unpkg.com/three@0.83.0/examples/js/shaders/HorizontalBlurShader.js'></script>
-<script src='https://unpkg.com/three@0.83.0/examples/js/shaders/VerticalBlurShader.js'></script>
-<script src='https://unpkg.com/three@0.83.0/examples/js/shaders/FilmShader.js'></script>
-<script src='https://unpkg.com/three@0.83.0/examples/js/shaders/LuminosityHighPassShader.js'></script>
-
-
- -->
-
-
 <link rel="stylesheet" href='{{ "js/hologram/hologram.css" | relURL }}'>
-<!-- <script type='text/javascript' src='{{ "/js/hologram/holoshaders.js" | relURL }}'></script> -->
 <script type='module' src='{{ "js/hologram/main.js" | relURL }}'></script>
-
-
 <div id="hologram" data-src='{{ .Get "src" | relURL }}' ></div>

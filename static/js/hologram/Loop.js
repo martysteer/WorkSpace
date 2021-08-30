@@ -11,15 +11,17 @@ class Loop {
     this.camera = camera;
     this.scene = scene;
     this.renderer = renderer;
-    this.updatables = []; // list of opdatable objects
+    this.updatables = []; // list of updatable objects
+    this.composers = []; // list of composer layers
+
   }
 
 
   // The loop controls the rendering so it can
   // implement composer and layer renderpass logic
   render() {
-    this.renderer.render(this.scene, this.camera);
-    
+    // this.renderer.render(this.scene, this.camera);
+    this.composers[0].render();
   }
 
   // Start the animation by settings a loop function

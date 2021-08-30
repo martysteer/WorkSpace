@@ -99,7 +99,8 @@ class Hologram {
     // Setup postprocessing - we do this down here so the scene and objects 
     // and sizes have initialised
     mainComposer = createMainComposer(container, camera, scene, renderer);
-    
+    loop.updatables.push(mainComposer);  // to tick the composer passes
+    loop.composers.push(mainComposer); // to give the loop composer layers to render
 
   }
 
