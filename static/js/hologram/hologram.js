@@ -17,6 +17,13 @@ import { createRenderer } from './renderer.js';
 import { Resizer } from './Resizer.js';
 import { Loop } from './Loop.js';
 
+import { MathUtils,
+         Mesh,
+         MeshBasicMaterial,
+         MeshStandardMaterial,
+         PlaneGeometry,
+         TextureLoader,
+} from './three/build/three.module.js';
 
 // ----------------------------------------------------------
 // Module scoped variables
@@ -49,11 +56,10 @@ class Hologram {
 
     // Add meshes to scene
     const cube = createCube();
-    scene.add(cube);
+    // scene.add(cube);
 
     // Add image plane (using data-src value from container)
-    console.log(container.dataset);
-    const plane = createPlane(container.dataset.src);
+    const plane = createPlane(container.dataset.src);    
     scene.add(plane);
 
 
