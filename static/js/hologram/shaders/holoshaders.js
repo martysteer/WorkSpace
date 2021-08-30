@@ -8,7 +8,8 @@
  * THREE.AdditiveBlendingShader
  * 
  **/
-THREE.VolumetericLightShader = {
+
+const VolumetericLightShader = {
   uniforms: {
     tDiffuse: {
       value: null
@@ -34,14 +35,13 @@ THREE.VolumetericLightShader = {
   },
 
 
-  vertexShader: [
-    "varying vec2 vUv;",
-    "void main() {",
-    "vUv = uv;",
-    "gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);",
-    "}"
-  ].
-  join("\n"),
+  vertexShader: [`
+    varying vec2 vUv;
+    void main() {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }`
+  ],
 
   fragmentShader: [
     "varying vec2 vUv;",
@@ -79,7 +79,7 @@ THREE.VolumetericLightShader = {
 
 
 // ----------------------------------------------------------
-THREE.AdditiveBlendingShader = {
+const AdditiveBlendingShader = {
   uniforms: {
     tDiffuse: {
       value: null
@@ -113,8 +113,9 @@ THREE.AdditiveBlendingShader = {
 };
 
 
+
 // ----------------------------------------------------------
-THREE.PassThroughShader = {
+const PassThroughShader = {
   uniforms: {
     tDiffuse: {
       value: null
@@ -140,3 +141,7 @@ THREE.PassThroughShader = {
   ].
   join("\n")
 };
+
+
+// ----------------------------------------------------------
+export { VolumetericLightShader, AdditiveBlendingShader, PassThroughShader };

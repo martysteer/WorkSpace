@@ -6,8 +6,6 @@ import { Clock } from './three/build/three.module.js';
 const clock = new Clock();
 
 // ----------------------------------------------------------
-// Hologram.js
-// ----------------------------------------------------------
 class Loop {
   constructor(camera, scene, renderer) {
     this.camera = camera;
@@ -17,11 +15,18 @@ class Loop {
   }
 
 
+  // The loop controls the rendering so it can
+  // implement composer and layer renderpass logic
+  render() {
+    this.renderer.render(this.scene, this.camera);
+    
+  }
+
   // Start the animation by settings a loop function
   start() {
     this.renderer.setAnimationLoop(() => {
       this.tick(); // progress a single frame
-      this.renderer.render(this.scene, this.camera);
+      this.render();
     });    
   }
 
