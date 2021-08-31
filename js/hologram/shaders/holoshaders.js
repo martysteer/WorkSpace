@@ -1,13 +1,15 @@
 /**
  * Hologram shaders for Holographic Projection
  * A Pen created on CodePen.io.
- * Original URL: [https://codepen.io/peterhry/pen/egzjGR](https://codepen.io/peterhry/pen/egzjGR).
+ * Original URL: https://codepen.io/peterhry/pen/egzjGR
  * 
- * THREE.VolumetericLightShader
- * THREE.PassThroughShader
- * THREE.AdditiveBlendingShader
+ * VolumetericLightShader
+ * PassThroughShader
+ * AdditiveBlendingShader
  * 
  **/
+import { Vector2 } from '../three/build/three.module.js';
+
 
 const VolumetericLightShader = {
   uniforms: {
@@ -15,7 +17,7 @@ const VolumetericLightShader = {
       value: null
     },
     lightPosition: {
-      value: new THREE.Vector2(0.5, 0.5)
+      value: new Vector2(0.5, 0.5)
     },
     exposure: {
       value: 1
@@ -35,13 +37,14 @@ const VolumetericLightShader = {
   },
 
 
-  vertexShader: [`
-    varying vec2 vUv;
-    void main() {
-      vUv = uv;
-      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-    }`
-  ],
+  vertexShader: [
+    "varying vec2 vUv;",
+    "void main() {",
+      "vUv = uv;",
+      "gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);",
+    "}"
+  ].
+  join("\n"),
 
   fragmentShader: [
     "varying vec2 vUv;",

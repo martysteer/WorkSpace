@@ -27,6 +27,7 @@ import {
   Mesh,
   MeshBasicMaterial,
   MeshStandardMaterial,
+  Object3D,
   PlaneGeometry,
   TextureLoader,
 } from './three/build/three.module.js';
@@ -72,8 +73,8 @@ class Hologram {
     const controls = createControls(camera, renderer.domElement);
 
     // Get all the lights and add to scene
-    const lights = createLights();
-    Object.values(lights).forEach(l => scene.add(l));
+    // const lights = createLights();
+    // Object.values(lights).forEach(l => scene.add(l));
 
     // Add meshes to scene
     const cube = createCube();
@@ -84,24 +85,36 @@ class Hologram {
     scene.add(plane);
 
     // Clone the plane to turn it into the occlusion layer.
+    // Set it to render on the occlusion layer (via the occlusion composer).
     const occlusionPlane = createPlane(container.dataset.src);
     occlusionPlane.material.color.setHex(lightColor);
-    // occlusionPlane.layers.set(OCCLUSION_LAYER);  // used in multipass rendering
-    occlusionPlane.position.z = -0.3;
-    // scene.add(occlusionPlane);
+    occlusionPlane.layers.set(OCCLUSION_LAYER);  // used in multipass rendering
+    // occlusionPlane.position.z = -0.3;
+    scene.add(occlusionPlane);
 
-    // Keep track of the objects to animate
+    // All the objects to animate to the Loop constroller
     loop.updatables.push(controls, cube, plane, occlusionPlane);
 
     // Make sure the canvas resizes when the window does
     const resizer = new Resizer(container, camera, renderer);
 
     // Setup postprocessing - we do this down here so the scene and objects 
-    // and sizes have initialised
-    mainComposer = createMainComposer(container, camera, scene, renderer);
-    loop.updatables.push(mainComposer);  // to tick the composer passes
-    loop.composers.push(mainComposer); // to give the loop composer layers to render
+    // and sizes have initialised/
+    // There are two composers - occlusion and main. They are linked.
+    occlusionComposer = createOcclusionComposer(container, camera, scene, renderer);
+    loop.updatables.push(occlusionComposer);
+    loop.occlusionComposer = occlusionComposer;
 
+    mainComposer = createMainComposer(container, camera, scene, renderer);    
+    loop.updatables.push(mainComposer);
+    loop.mainComposer = mainComposer;
+
+    // Set the light source where the hologram beam eminates from
+    const hologramLight = new Object3D();
+    hologramLight.position.x = 0;
+    hologramLight.position.y = 15;
+    hologramLight.position.z = 15;
+    occlusionComposer.updateShaderLight(hologramLight, camera);
   }
 
 
