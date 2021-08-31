@@ -16,12 +16,6 @@ function createLights() {
   const pointLight = new PointLight(0xffffff, 1);
   pointLight.position.set(25, 50, 25);
 
-  // The light source where the hologram beam eminates from?
-  const hologramLight = new Object3D();
-  hologramLight.position.x = 0;
-  hologramLight.position.y = -15;
-  hologramLight.position.z = -15;
-
   return { ambientLight, pointLight, mainLight };
 }
 

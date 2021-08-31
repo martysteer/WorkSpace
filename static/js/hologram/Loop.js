@@ -1,9 +1,9 @@
-/**
- * 
- **/
 import { Clock } from './three/build/three.module.js';
 
+const DEFAULT_LAYER = 0;
+const OCCLUSION_LAYER = 1;
 const clock = new Clock();
+
 
 // ----------------------------------------------------------
 class Loop {
@@ -12,17 +12,28 @@ class Loop {
     this.scene = scene;
     this.renderer = renderer;
     this.updatables = []; // list of updatable objects
-    this.composers = []; // list of composer layers
 
+    // Custom composers to use for rendering.
+    this.mainComposer = null;
+    this.occlusionComposer = null;
   }
 
 
-  // The loop controls the rendering so it can
-  // implement composer and layer renderpass logic
+  // The Loop controls the rendering so it can implement
+  // composer and layer renderpass logic.
   render() {
     // this.renderer.render(this.scene, this.camera);
-    this.composers[0].render();
+
+    if (this.occlusionComposer) {
+      this.camera.layers.set(OCCLUSION_LAYER);
+      this.occlusionComposer.render(); 
+    }
+    if (this.mainComposer) {
+      this.camera.layers.set(DEFAULT_LAYER);
+      this.mainComposer.render();      
+    }
   }
+
 
   // Start the animation by settings a loop function
   start() {
