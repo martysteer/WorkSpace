@@ -3,21 +3,26 @@
 
 {{ partial "head.html" . }}
 
-<body class="calligraphic crt">
-  <div class="container">
+<body>
+  <main class="container crt">
+
     {{ partial "header.html" . }}
-    
-    {{ .Content }}
-    
-    {{ range sort (where site.RegularPages.ByWeight "Type" "in" "post") }}
+  
+
     <article>
-        {{ .Render "list-item" }}
+      {{ .Content }}
     </article>
+    
+    
+    {{ with .NextInSection }}
+    <nav>  
+      <h3 class="go-center">&rarr; <a class="next" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h3>
+    </nav>
     {{ end }}
 
     {{ partial "nav.html" . }}
     {{ partial "footer.html" . }}
-
-  </div>
+  </main>
 </body>
+
 </html>
