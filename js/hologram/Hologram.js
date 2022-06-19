@@ -96,6 +96,7 @@ class Hologram {
     loop.updatables.push(controls, cube, plane, occlusionPlane);
 
     // Make sure the canvas resizes when the window does
+    // TODO: make the camera scale with the container
     const resizer = new Resizer(container, camera, renderer);
 
     // Setup postprocessing - we do this down here so the scene and objects 

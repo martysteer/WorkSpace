@@ -1,13 +1,7 @@
 #hologram {
-  /*position: relative;*/
-  /*width: 100%;*/
-  /*height: 30%;*/
-  line-height: 0; /* This prevents canvas height expanding on resize */
-}
-
-
-
-/* temp override */
-.container {
-  max-width: 80%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*line-height: 0;*/
+   /* This prevents canvas height expanding on resize */
 }
