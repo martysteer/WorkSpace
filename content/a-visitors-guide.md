@@ -6,10 +6,9 @@ title: A Visitor's Guide
 type: page
 url: /visitors-guide/
 hologram: images/exoskel.png
-# hologram: images/blaster.png
 ---
 
-{{<hologram/img src="images/exoskel.png">}}
+<!-- {{<hologram/img src="images/exoskel.png">}} -->
 <!-- {{<hologram/img src="images/blaster.png">}} -->
 
 [![WorkSpace Operator](/wp-content/uploads/2009/05/workspace05wht_alt-255x300.jpg)

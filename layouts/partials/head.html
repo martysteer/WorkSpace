@@ -10,11 +10,11 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
   <link rel="shortcut icon" type="image/jpg" href="/favicon.ico" />
-  <link rel="stylesheet" href='{{ "css/paperback.css" | relURL }}'>
+  <!-- <link rel="stylesheet" href='{{ "css/paperback.css" | relURL }}'> -->
   <link rel="stylesheet" href='{{ "css/workspace.css" | relURL }}'>
 
   <!-- <link rel="stylesheet" href='{{ "css/crt.css" | relURL }}'> -->
-  {{ $sass := resources.Get "scss/crt.scss" }}
+<!--   {{ $sass := resources.Get "scss/crt.scss" }}
   {{ $style := $sass | resources.ToCSS }}
 
 
@@ -26,7 +26,7 @@
     {{ $style := resources.Get "scss/crt.scss" | toCSS (dict "targetPath" "css/crt.css" "enableSourceMap" false) }}
     <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
 
-  {{ end }}
+  {{ end }} -->
 
 
 

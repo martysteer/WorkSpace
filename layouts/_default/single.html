@@ -8,14 +8,23 @@
 
     {{ partial "header.html" . }}
   
-
     <article>
       {{ .Content }}
     </article>
+
+    <aside>aside
+      {{ with $.Params.hologram }}
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
+        <link rel="stylesheet" href='{{ "js/hologram/hologram.css" | relURL }}' />
+        <script type='module' src='{{ "js/hologram/main.js" | relURL }}'></script>
+        <div id="hologram" data-src='{{ $.Params.hologram | relURL }}' ></div>
+        single.html
+      {{ end }}
+    </aside>
     
     
     {{ with .NextInSection }}
-    <nav>  
+    <nav class="section-nav">  
       <h3 class="go-center">&rarr; <a class="next" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h3>
     </nav>
     {{ end }}
